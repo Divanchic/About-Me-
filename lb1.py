@@ -1,8 +1,4 @@
 import random
-import json
-
-with open(r"C:\Users\KudlaIva_89\PycharmProjects\pythonProject\.venv\Scripts\pas.json", "r", encoding="UTF-8") as json_file:
-    a = json.load(json_file)
 
 d = input("Введите свое имя: ")
 b = ""
@@ -19,5 +15,6 @@ if (len(d)%100)>9:
 else:
     b += "0"
     b += str(len(d) % 100)
-
+with open("pas.txt", "a", encoding="UTF-8") as file:
+    file.write(f"\n{d}-{b}")
 print(b)
